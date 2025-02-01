@@ -6,7 +6,7 @@
 
 
     <ScrollView>
-        <StackLayout>
+        <FlexLayout>
             <Label Text="Flex Layout in .NET MAUI" FontSize="24" Margin="0, 50" />
             <Label Text="FlexLayout with JustifyContent='Center' and Wrap='Wrap'" FontSize="18" HorizontalOptions="Center" Margin="0, 10, 0, 0" />
             <FlexLayout JustifyContent="Center" AlignItems="Center" Wrap="Wrap">
@@ -84,7 +84,7 @@
             </FlexLayout>
 
 
-        </StackLayout>
+        </FlexLayout>
     </ScrollView>
 
 </ContentPage>
