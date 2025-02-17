@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_16_Image"
+             x:DataType="local:MainPage"
+             x:Class="_16_Image.MainPage">
+
+
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="30">
+            <Label Text="Advanced Image Handling in .NET MAUI"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            
+            <!-- Local Image -->
+            <Label Text="Local Image"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Blue" />
+            <Image Source="dotnet_bot.png"
+                   Aspect="AspectFit"
+                   HeightRequest="200"
+                   HorizontalOptions="Center" />
+            
+            <!-- Remote Image with Custom Caching -->
+            <Label Text="Remote Image with Custom Caching"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Blue" />
+            <Image>
+                <Image.Source>
+                    <UriImageSource Uri="https://amkinggroup.com/wp-content/uploads/2022/02/TrueCore.-Dusk-Exterior-1.jpg"
+                                    CacheValidity="10:00:00:00" />
+                </Image.Source>
+                <Image.HeightRequest>200</Image.HeightRequest>
+                <Image.HorizontalOptions>Center</Image.HorizontalOptions>
+            </Image>
+            
+            <!-- Image from Stream -->
+            <Label Text="Image from Stream"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Blue" />
+            <Image Source="{Binding MyImageSource}"
+                   Aspect="AspectFit"
+                   HeightRequest="200"
+                   HorizontalOptions="Center" />
+            
+            <!-- Font Icon -->
+            <Label Text="Font Icon"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Blue" />
+            <Image BackgroundColor="MediumSlateBlue">
+                <Image.Source>
+                    <FontImageSource Glyph="&#xf30c;"
+                                     FontFamily="Ionicons" Color="Orange"
+                                     Size="44" />
+                </Image.Source>
+                <Image.HeightRequest>44</Image.HeightRequest>
+            </Image>
+            
+            <!-- Animated GIFs -->
+            <Label Text="Animated GIF"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Blue" />
+            <Image Source="demo.gif"
+                   IsAnimationPlaying="True"
+                   HeightRequest="200"
+                   HorizontalOptions="Center" />
+            
+            <!-- Image Scaling - AspectFill -->
+            <Label Text="Image Scaling - AspectFill"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Blue" />
+            <Image Source="dotnet_bot.png"
+                   Aspect="AspectFill"
+                   HeightRequest="200"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
